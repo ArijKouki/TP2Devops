@@ -29,10 +29,10 @@ jobs:
       - name: Run Unit Tests
         run: npm test
 
-      - name: Set up JDK 17 (Adoptium)
+      - name: Set up JDK 17 (Temurin)
         uses: actions/setup-java@v3
         with:
-          distribution: 'adoptium'
+          distribution: 'temurin'
           java-version: '17'
 
       - name: Install SonarQube Scanner
