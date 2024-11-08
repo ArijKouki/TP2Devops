@@ -49,4 +49,10 @@ jobs:
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=$SONAR_TOKEN \
             -Dsonar.branch.name=master
+      
+      - name: Install Snyk
+        run: npm install -g snyk
+
+      - name: Run Snyk Test
+        run: snyk test --all-projects
 
