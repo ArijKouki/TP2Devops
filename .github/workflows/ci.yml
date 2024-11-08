@@ -29,6 +29,12 @@ jobs:
       - name: Run Unit Tests
         run: npm test
 
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adoptopenjdk'
+          java-version: '17'
+
       - name: Install SonarQube Scanner
         run: npm install -g sonar-scanner
 
